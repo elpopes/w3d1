@@ -107,10 +107,14 @@ class Array
 
   def my_reverse
     result_str = []
-    for i in (self.length - 1).downto(0)
-      result_str << self[i]
-    end
+
+    self.reverse_each { |e| result_str << e }
+
     result_str
+    # for i in (self.length - 1).downto(0)
+    #   result_str << self[i]
+    # end
+    # result_str
   end
 end
 
